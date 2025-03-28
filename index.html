@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Younas - Personal ChatBot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Muhammad Younas's Assistant</h1>
+            <div class="header-buttons">
+                <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+                <button id="voiceBtn"><i class="fas fa-microphone"></i></button>
+            </div>
+        </div>
+        
+        <div class="chat-box" id="chatBox">
+            <div class="bot-message">Hello! I'm Muhammad Younas's personal assistant. Ask me anything about him!</div>
+        </div>
+        
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Type your message..." autofocus>
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+            <button onclick="clearChat()"><i class="fas fa-trash"></i></button>
+        </div>
+
+        <div class="quick-questions">
+            <p>Try asking:</p>
+            <div class="quick-buttons">
+                <button onclick="quickQuestion('Who created you?')">Creator</button>
+                <button onclick="quickQuestion('Where are you from?')">Location</button>
+                <button onclick="quickQuestion('Social media links')">Social Media</button>
+                <button onclick="quickQuestion('Tell me about yourself')">About</button>
+            </div>
+        </div>
+
+        <div class="chat-actions">
+            <button onclick="exportChat()"><i class="fas fa-download"></i> Export Chat</button>
+            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="ur">اردو</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
